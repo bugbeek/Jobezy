@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JobEzy</title>
+    <title>JobEzy - Find Your Dream Job | Job Search Made Easy</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="JobEzy helps you find your dream job with ease. Explore thousands of job listings, apply online, and kickstart your career today.">
+    
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
@@ -23,15 +27,29 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    
     <!-- Stylesheets -->
     <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+
+    <!-- SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "JobEzy",
+      "url": "http://example.com",
+      "description": "JobEzy helps you find your dream job with ease. Explore thousands of job listings, apply online, and kickstart your career today."
+    }
+    </script>
+
+    <!-- Inline Styles -->
     <style>
       body {
         background-color: black;
-        color: white; /* Optional: Change text color to white for better contrast */
+        color: white; /* Change text color to white for better contrast */
       }
       .main {
         padding: 20px;
@@ -45,37 +63,39 @@
           <div class="container">
             <div class="content2">
               <!-- Logo -->
-              <img src="assets/images/logo.png" alt="JobEzy Logo" style="width:150px;">
-              <!-- <h1>JobEzy</h1> -->
+              <img src="assets/images/logo.png" alt="JobEzy Logo - Job Search Platform" style="width:150px;">
             </div>
             <div class="counter" id="countdown">
-              <h2>Launching in <span class="days timenumbers">100</span>&nbsp;days 
-              <span class="hours timenumbers">00</span>h 
-              <span class="minutes timenumbers">00</span>m 
-              <span class="seconds timenumbers yellow-text">00</span>s</h2>
+              <br>
+              <p>Welcome to JobEzy - Your Gateway to the All Jobs at One place</p>
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                   <p>We make your job search Ezy</p>
                 </div>
               </div>
+              <br>
+              <h2>Launching in <span class="days timenumbers">100</span>&nbsp;days 
+              <span class="hours timenumbers">00</span>h 
+              <span class="minutes timenumbers">00</span>m 
+              <span class="seconds timenumbers yellow-text">00</span>s</h2>
+
             </div>
           </div>
         </div>
       </section>
     </main>
+    
     <!-- JavaScripts -->
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/owl.carousel/dist/owl.carousel.js"></script>
     <script src="assets/lib/ajaxchimp/jquery.ajaxchimp.js"></script>
-    <!-- <script src="assets/js/main.js"></script> -->
+    
     <script>
       // Set the date we're counting down to
       var countDownDate = new Date("Dec 31, 2024 15:37:25").getTime();
 
-      // Update the countdown every 1 second
-      var x = setInterval(function() {
-
+      function updateCountdown() {
         // Get today's date and time
         var now = new Date().getTime();
 
@@ -99,7 +119,13 @@
           clearInterval(x);
           document.getElementById("countdown").innerHTML = "Launched!";
         }
-      }, 1000);
+      }
+
+      // Initial update
+      updateCountdown();
+
+      // Update the countdown every 1 second
+      var x = setInterval(updateCountdown, 1000);
     </script>
   </body>
 </html>
